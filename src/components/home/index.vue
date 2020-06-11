@@ -51,7 +51,7 @@
                     </div>
                   </div>
               </div>
-              <div class="submit">立即充值: {{money}}元</div>
+              <div class="submit" @click="submit">立即充值: {{money}}元</div>
           </div>
       </div>
   </div>
@@ -109,6 +109,12 @@ export default {
         //跳转到更多游戏界面
         getMoreInfo () {
             this.$router.push('/otherGames')
+        },
+
+        //提交充值信息
+        submit() {
+            console.log('QQ-------'+this.input)
+            console.log(this.type+'金额-------'+this.money)
         }
     },
     computed:{
